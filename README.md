@@ -1,8 +1,8 @@
-Cyber Czech 2019 Exercise Analysis
+# **Cyber Czech 2019 Exercise Analysis**
 
 This repository contains a Jupyter Notebook that walks through the analysis of network traffic and log data captured during the March 2019 Cyber Czech red‑team/blue‑team exercise.
 Repository Structure
-
+```
 .
 ├── cz.muni.csirt.IPFlowEntry/
 │   └── data.json.gz
@@ -15,37 +15,41 @@ Repository Structure
 │   └── redteam-attack-schedule.csv
 ├── mini_project_rinnemaki.ipynb
 └── README.md
+```
+## Data Sources
 
-Data Sources
+**IPFIX flows:** enriched NetFlow records in data.json.gz
 
-    IPFIX flows: enriched NetFlow records in data.json.gz
-    Syslog: Linux log messages in data.json.gz
-    Winlog: Windows Event XML in data.json.gz
-    Auxiliary: Red‑Team IP ranges and attack schedule CSVs
+**Syslog:** Linux log messages in data.json.gz
 
-Summary of Analysis
+**Winlog:** Windows Event XML in data.json.gz
 
-Loading & Cleaning Chunk‑streamed JSON‑gz files, normalized timestamps to Europe/Prague.
+**Auxiliary:** Red‑Team IP ranges and attack schedule CSVs
 
-Tagging Red Team Flagged flows and log entries containing known Red‑Team IPs or hostnames.
+## Summary of Analysis
 
-Descriptive Statistics Counted ~140 k flows, ~6 M syslog entries; extracted Winlog severity from XML.
+- Loading & Cleaning Chunk‑streamed JSON‑gz files, normalized timestamps to Europe/Prague.
 
-Time‑Series Visualization Hourly plots show initial network spikes then service‑level log surges on both days.
+- Tagging Red Team Flagged flows and log entries containing known Red‑Team IPs or hostnames.
 
-Severity Breakdown Syslog severity levels reveal many informational logs and a tail of warnings/errors.
+- Descriptive Statistics Counted ~140 k flows, ~6 M syslog entries; extracted Winlog severity from XML.
 
-Unified Timeline Combined all Red‑Team events into one chronological view for end‑to‑end reconstruction.
-Future Work
+- Time‑Series Visualization Hourly plots show initial network spikes then service‑level log surges on both days.
 
-Protocol Analysis – drill into IPFIX application protocols.
+- Severity Breakdown Syslog severity levels reveal many informational logs and a tail of warnings/errors.
 
-Anomaly Detection – build baselines and detect deviations.
+- Unified Timeline Combined all Red‑Team events into one chronological view for end‑to‑end reconstruction.
 
-Cross‑Dataset Correlation – link flows, syslog, and winlog by session or time.
+## Future Work
 
-Machine Learning – classify malicious vs. benign events.
+**Protocol Analysis** – drill into IPFIX application protocols.
 
-Interactive Dashboard – real‑time filtering and drill‑down (Streamlit, Dash).
+**Anomaly Detection** – build baselines and detect deviations.
 
-Mini‑Project for Python for Data Analytics & Statistics, Metropolia UAS (Spring 2025).
+**Cross‑Dataset Correlation** – link flows, syslog, and winlog by session or time.
+
+**Machine Learning** – classify malicious vs. benign events.
+
+**Interactive Dashboard** – real‑time filtering and drill‑down (Streamlit, Dash).
+
+## **Mini‑Project for Python for Data Analytics & Statistics, Metropolia UAS (Spring 2025).**
