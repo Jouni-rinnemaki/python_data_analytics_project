@@ -1,6 +1,7 @@
 # **Cyber Czech 2019 Exercise Analysis**
 
 This repository contains a Jupyter Notebook that walks through the analysis of network traffic and log data captured during the March 2019 Cyber Czech red‑team/blue‑team exercise.
+
 Repository Structure
 ```
 .
