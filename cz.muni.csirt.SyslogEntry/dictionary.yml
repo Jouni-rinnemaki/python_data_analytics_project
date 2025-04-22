@@ -1,0 +1,39 @@
+---
+
+data-schema:
+  - name: app_name
+    type: string (nullable = true)
+    description: Equivalent to the Syslog Protocol [RFC5424] field APP-NAME - The APP-NAME field SHOULD identify the device or application that originated the message.  It is a string without further semantics. It is intended for filtering messages on a relay or collector.
+  - name: exercise_segment
+    type: string (nullable = true)
+    description: Cyber-exercise segment as per the `fromhost_ip` attribute.
+  - name: facility
+    type: integer (nullable = true)
+    description: Derived from the Syslog Protocol [RFC5424] field PRI - The Facility value.
+  - name: fromhost_ip
+    type: string (nullable = true)
+    description: IP address of the machine that has sent the event.
+  - name: hostname
+    type: string (nullable = true)
+    description: Equivalent to the Syslog Protocol [RFC5424] field HOSTNAME - The HOSTNAME field identifies the machine that originally sent the syslog message.
+  - name: message
+    type: string (nullable = true)
+    description: Equivalent to the Syslog Protocol [RFC5424] field MSG - The MSG part contains a free-form message that provides information about the event.
+  - name: procid
+    type: integer (nullable = true)
+    description: Equivalent to the Syslog Protocol [RFC5424] field PROCID - The PROCID field is often used to provide the process name or process ID associated with a syslog system.
+  - name: programname
+    type: string (nullable = true)
+    description: Derived from the BSD Syslog Protocol [RFC3164] field TAG - The name of the program or process that generated the message.
+  - name: severity
+    type: integer (nullable = true)
+    description: Derived from the Syslog Protocol [RFC5424] field PRI - The Severity value.
+  - name: timegenerated
+    type: string (nullable = true)
+    description: Time of the event receival by the central server - represented in ISO8601 format.
+  - name: timereported
+    type: string (nullable = true)
+    description: Time of the event creation on the machine - represented in ISO8601 format.
+  - name: timestamp
+    type: long (nullable = true)
+    description: UNIX Epoch timestamp in milliseconds equivalent to the `timegenerated` attribute.

@@ -1,0 +1,44 @@
+---
+
+data-schema:
+  - name: beat
+    type: struct (nullable = true)
+    description: Winlogbeat (elastic.co) - Information from the Beat agent.
+    fields:
+      - name: hostname
+        type: string (nullable = true)
+        description: Winlogbeat (elastic.co) - The hostname as returned by the operating system on which the Beat is running.
+      - name: name
+        type: string (nullable = true)
+        description: Winlogbeat (elastic.co) - The name of the Beat sending the events. If the Beat name is set in the configuration file, then that value is used. If it is not set, the hostname is used.
+      - name: version
+        type: string (nullable = true)
+        description: Winlogbeat (elastic.co) - The version of the Beat that generated this event.
+  - name: exercise_segment
+    type: string (nullable = true)
+    description: Cyber-exercise segment as per the `host_ip` attribute.
+  - name: host
+    type: struct (nullable = true)
+    description: Winlogbeat (elastic.co) - Info collected for the host machine.
+    fields:
+      - name: name
+        type: string (nullable = true)
+        description: Winlogbeat (elastic.co) - Hostname of the machine.
+  - name: host_ip
+    type: string (nullable = true)
+    description: IP address of the machine that has sent the event.
+  - name: orig_timestamp
+    type: string (nullable = true)
+    description: Time of the event receival by the central server - represented in ISO8601 format.
+  - name: tags
+    type: array[string (containsNull = true)] (nullable = true)
+    description: Winlogbeat (elastic.co) - Arbitrary tags that can be set per Beat and per transaction type.
+  - name: timestamp
+    type: long (nullable = true)
+    description: UNIX Epoch timestamp in milliseconds equivalent to the `orig_timestamp` attribute.
+  - name: type
+    type: string (nullable = true)
+    description: Winlogbeat (elastic.co) - The event log API type used to read the record. The possible values are "wineventlog" for the Windows Event Log API or "eventlogging" for the Event Logging API.
+  - name: xml
+    type: string (nullable = true)
+    description: Winlogbeat (elastic.co) - The raw XML representation of the event obtained from Windows.

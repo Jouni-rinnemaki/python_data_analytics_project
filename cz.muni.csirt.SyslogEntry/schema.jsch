@@ -1,0 +1,104 @@
+{
+  "definitions" : {
+    "record:cz.muni.csirt.SyslogEntry" : {
+      "type" : "object",
+      "required" : [ ],
+      "additionalProperties" : false,
+      "properties" : {
+        "app_name" : {
+          "oneOf" : [ {
+            "type" : "string"
+          }, {
+            "type" : "null"
+          } ]
+        },
+        "exercise_segment" : {
+          "oneOf" : [ {
+            "type" : "string"
+          }, {
+            "type" : "null"
+          } ]
+        },
+        "facility" : {
+          "oneOf" : [ {
+            "type" : "integer",
+            "minimum" : -9223372036854775808,
+            "maximum" : 9223372036854775807
+          }, {
+            "type" : "null"
+          } ]
+        },
+        "fromhost_ip" : {
+          "oneOf" : [ {
+            "type" : "string"
+          }, {
+            "type" : "null"
+          } ]
+        },
+        "hostname" : {
+          "oneOf" : [ {
+            "type" : "string"
+          }, {
+            "type" : "null"
+          } ]
+        },
+        "message" : {
+          "oneOf" : [ {
+            "type" : "string"
+          }, {
+            "type" : "null"
+          } ]
+        },
+        "procid" : {
+          "oneOf" : [ {
+            "type" : "integer",
+            "minimum" : -9223372036854775808,
+            "maximum" : 9223372036854775807
+          }, {
+            "type" : "null"
+          } ]
+        },
+        "programname" : {
+          "oneOf" : [ {
+            "type" : "string"
+          }, {
+            "type" : "null"
+          } ]
+        },
+        "severity" : {
+          "oneOf" : [ {
+            "type" : "integer",
+            "minimum" : -9223372036854775808,
+            "maximum" : 9223372036854775807
+          }, {
+            "type" : "null"
+          } ]
+        },
+        "timegenerated" : {
+          "oneOf" : [ {
+            "type" : "string"
+          }, {
+            "type" : "null"
+          } ]
+        },
+        "timereported" : {
+          "oneOf" : [ {
+            "type" : "string"
+          }, {
+            "type" : "null"
+          } ]
+        },
+        "timestamp" : {
+          "oneOf" : [ {
+            "type" : "integer",
+            "minimum" : -9223372036854775808,
+            "maximum" : 9223372036854775807
+          }, {
+            "type" : "null"
+          } ]
+        }
+      }
+    }
+  },
+  "$ref" : "#/definitions/record:cz.muni.csirt.SyslogEntry"
+}

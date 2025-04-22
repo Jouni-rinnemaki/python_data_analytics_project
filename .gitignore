@@ -1,0 +1,116 @@
+# Ignore system-specific files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Ignore backup and temporary files
+*.bak
+*.swp
+*.swo
+*.tmp
+*.log
+
+# Ignore binary files
+*.exe
+*.dll
+*.iso
+*.img
+*.bin
+*.tar
+*.gz
+*.zip
+*.7z
+*.rar
+
+# Ignore database files
+*.sqlite
+*.db
+*.mdb
+
+# Ignore large files (GitHub has a 100MB limit per file)
+*.mp4
+*.mkv
+*.avi
+*.mov
+*.iso
+*.vhd
+*.vmdk
+
+# Ignore proprietary or large learning files
+*.pdf
+*.epub
+*.mobi
+*.pptx
+*.docx
+*.odt
+*.xls
+*.xlsx
+
+# Ignore compiled code
+*.class
+*.o
+*.so
+*.dll
+*.out
+*.pyc
+*.pyo
+*.pyd
+node_modules/
+dist/
+build/
+
+# Ignore virtual environments
+venv/
+.env/
+.venv/
+__pycache__/
+
+# Ignore package managers' lock files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+poetry.lock
+
+# Ignore IDE and editor config files
+.vscode/
+.idea/
+*.iml
+*.sublime-workspace
+*.sublime-project
+
+# Ignore Git-related files
+# .gitignore
+.gitattributes
+.gitkeep
+
+# Ignore the data folders
+mini_project/rawData/
+# mini_project/workingData/
+mini_project/workingData/auxiliary-material
+mini_project/workingData/cz.muni.csirt.SyslogEntry
+mini_project/workingData/cz.muni.csirt.WinlogEntry
+mini_project/workingData/cz.muni.csirt.IPFlowEntry
+
+# Ignore common dataset and archive files
+*.tgz
+*.tar.gz
+*.zip
+*.rar
+*.7z
+*.csv
+*.tsv
+*.json
+*.xml
+*.log
+*.bak
+*.dat
+*.gz
+*.xz
+*.lz4
+
+# Ignore jupyter tmp files
+.jupyter/
+.ipynb_checkpoints/
+*/.jupyter/
+mini_project/workingData/.jupyter/
+mini_project/workingData/.ipynb_checkpoints/

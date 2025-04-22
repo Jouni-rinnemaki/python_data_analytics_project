@@ -1,0 +1,1 @@
+`beat` STRUCT<`hostname`: STRING, `name`: STRING, `version`: STRING>,`exercise_segment` STRING,`host` STRUCT<`name`: STRING>,`host_ip` STRING,`orig_timestamp` STRING,`tags` ARRAY<STRING>,`timestamp` BIGINT,`type` STRING,`xml` STRING

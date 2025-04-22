@@ -1,0 +1,126 @@
+{
+  "definitions" : {
+    "record:cz.muni.csirt.WinlogEntry" : {
+      "type" : "object",
+      "required" : [ ],
+      "additionalProperties" : false,
+      "properties" : {
+        "beat" : {
+          "oneOf" : [ {
+            "$ref" : "#/definitions/record:cz.muni.csirt.WinlogEntry.beat"
+          }, {
+            "type" : "null"
+          } ]
+        },
+        "exercise_segment" : {
+          "oneOf" : [ {
+            "type" : "string"
+          }, {
+            "type" : "null"
+          } ]
+        },
+        "host" : {
+          "oneOf" : [ {
+            "$ref" : "#/definitions/record:cz.muni.csirt.WinlogEntry.host"
+          }, {
+            "type" : "null"
+          } ]
+        },
+        "host_ip" : {
+          "oneOf" : [ {
+            "type" : "string"
+          }, {
+            "type" : "null"
+          } ]
+        },
+        "orig_timestamp" : {
+          "oneOf" : [ {
+            "type" : "string"
+          }, {
+            "type" : "null"
+          } ]
+        },
+        "tags" : {
+          "oneOf" : [ {
+            "type" : "array",
+            "items" : {
+              "oneOf" : [ {
+                "type" : "string"
+              }, {
+                "type" : "null"
+              } ]
+            }
+          }, {
+            "type" : "null"
+          } ]
+        },
+        "timestamp" : {
+          "oneOf" : [ {
+            "type" : "integer",
+            "minimum" : -9223372036854775808,
+            "maximum" : 9223372036854775807
+          }, {
+            "type" : "null"
+          } ]
+        },
+        "type" : {
+          "oneOf" : [ {
+            "type" : "string"
+          }, {
+            "type" : "null"
+          } ]
+        },
+        "xml" : {
+          "oneOf" : [ {
+            "type" : "string"
+          }, {
+            "type" : "null"
+          } ]
+        }
+      }
+    },
+    "record:cz.muni.csirt.WinlogEntry.beat" : {
+      "type" : "object",
+      "required" : [ "hostname", "name", "version" ],
+      "additionalProperties" : false,
+      "properties" : {
+        "hostname" : {
+          "oneOf" : [ {
+            "type" : "string"
+          }, {
+            "type" : "null"
+          } ]
+        },
+        "name" : {
+          "oneOf" : [ {
+            "type" : "string"
+          }, {
+            "type" : "null"
+          } ]
+        },
+        "version" : {
+          "oneOf" : [ {
+            "type" : "string"
+          }, {
+            "type" : "null"
+          } ]
+        }
+      }
+    },
+    "record:cz.muni.csirt.WinlogEntry.host" : {
+      "type" : "object",
+      "required" : [ "name" ],
+      "additionalProperties" : false,
+      "properties" : {
+        "name" : {
+          "oneOf" : [ {
+            "type" : "string"
+          }, {
+            "type" : "null"
+          } ]
+        }
+      }
+    }
+  },
+  "$ref" : "#/definitions/record:cz.muni.csirt.WinlogEntry"
+}

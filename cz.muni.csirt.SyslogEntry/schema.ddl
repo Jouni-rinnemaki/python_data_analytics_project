@@ -1,0 +1,1 @@
+`app_name` STRING,`exercise_segment` STRING,`facility` BIGINT,`fromhost_ip` STRING,`hostname` STRING,`message` STRING,`procid` BIGINT,`programname` STRING,`severity` BIGINT,`timegenerated` STRING,`timereported` STRING,`timestamp` BIGINT
